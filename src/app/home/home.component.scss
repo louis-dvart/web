@@ -18,34 +18,37 @@
     width: 100%;
     height: var(--banner-height);
     background-color: var(--banner-color);
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    & ul {
+    &-item {
         height: 100%;
+        cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
-        list-style: none;
-    }
-
-    & li {
-        height: 100%;
-    }
-
-    &-list-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
+        flex-direction: column;
+        // maybe replace this with width
         padding-left: 70px;
         padding-right: 70px;
-        font-size: 20pt;
-        text-decoration: none;
+        ///
+
         color: white;
-        transition: .3s;
+        transition: background-color .3s;
+
+        h1 {
+            font-size: 24pt;
+            margin: 0;
+        }
+
+        span {
+            position: relative;
+            top: -6px;
+            font-size: 10pt;
+            margin-top: 0;
+            padding-top: 0;
+        }
 
         &:hover {
             background-color: #40af51;

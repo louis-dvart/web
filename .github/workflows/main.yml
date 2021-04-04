@@ -20,6 +20,7 @@ jobs:
          env:
            GH_TOKEN: ${{ secrets.GH_TOKEN }}
          run: |
+           find src/app/ -name "*.scss" -exec sed -i "s@/assets@assets@" {} \;
            npm install
            npm run lint
            # npm test -- --watch=false --progress=false --browsers=ChromeHeadlessCI
