@@ -1,34 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
-
-    set_music() : void {
-        const el = document.getElementById('page-bg')
-        if (el)
-            el.style.backgroundImage = "url('assets/1.png')";
+export class HomeComponent implements AfterViewInit {
+    ngAfterViewInit(): void {
+        throw new Error('Method not implemented.');
     }
 
-    set_clips() : void {
+    set_bg(val: Number) : void {
         const el = document.getElementById('page-bg')
         if (el)
-            el.style.backgroundImage = "url('assets/2.png')";
+            el.style.backgroundImage = "url('assets/" + val + ".png')";
     }
-
-    set_store() : void {
-        const el = document.getElementById('page-bg')
-        if (el)
-            el.style.backgroundImage = "url('assets/3.png')";
-    }
-
-    set_about() : void {
-        const el = document.getElementById('page-bg')
-        if (el)
-            el.style.backgroundImage = "url('assets/4.png')";
-    }
-
 }
