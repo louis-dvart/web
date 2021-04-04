@@ -4,26 +4,26 @@
 <div class="navbar">
 	<div (mouseover)='set_bg(1)' class="navbar-item music" routerLink="music">
 		<div>
-			<h1>MUSIC</h1>
-			<span>Stream</span>
+			<h1>MUSIC <span>音楽</span></h1>
+			<span>STREAM</span>
 		</div>
 	</div>
-	<div (mouseover)='set_bg(2)' class="navbar-item clips" routerLink="videoclips">
+	<div (mouseover)='set_bg(2)' class="navbar-item clips" (click)="go_to_youtube()">
 		<div>
-			<h1>VIDEOCLIPS</h1>
-			<span>Watch</span>
+			<h1>VIDEOS <span>ビデオ</span></h1>
+			<span>WATCH</span>
 		</div>
 	</div>
 	<div (mouseover)='set_bg(3)' class="navbar-item store" routerLink="store">
 		<div>
-			<h1>STORE</h1>
-			<span>Merch</span>
+			<h1>STORE <span>お店</span></h1>
+			<span>MERCH</span>
 		</div>
 	</div>
 	<div (mouseover)='set_bg(4)' class="navbar-item about" routerLink="about">
 		<div>
-			<h1>ABOUT</h1>
-			<span>Info</span>
+			<h1>ABOUT <span>約</span></h1>
+			<span>INFO</span>
 		</div>
 	</div>
 
