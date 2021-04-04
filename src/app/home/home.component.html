@@ -1,27 +1,27 @@
 
-<div class="page-bg"></div>
+<div id="page-bg"></div>
 
 <div class="navbar">
-	<div class="navbar-item" routerLink="music">
-		<div class="navbar-list-link" >
+	<div (mouseover)='set_music()' class="navbar-item" routerLink="music">
+		<div>
 			<h1>MUSIC</h1>
 			<span>Stream</span>
 		</div>
 	</div>
-	<div class="navbar-item" routerLink="videoclips">
-		<div class="navbar-list-link" >
+	<div (mouseover)='set_clips()' class="navbar-item" routerLink="videoclips">
+		<div>
 			<h1>VIDEOCLIPS</h1>
 			<span>Watch</span>
 		</div>
 	</div>
-	<div class="navbar-item" routerLink="store">
-		<div class="navbar-list-link" >
+	<div (mouseover)='set_store()' class="navbar-item" routerLink="store">
+		<div>
 			<h1>STORE</h1>
 			<span>Merch</span>
 		</div>
 	</div>
-	<div class="navbar-item" routerLink="about">
-		<div class="navbar-list-link" >
+	<div (mouseover)='set_about()' class="navbar-item" routerLink="about">
+		<div>
 			<h1>ABOUT</h1>
 			<span>Info</span>
 		</div>

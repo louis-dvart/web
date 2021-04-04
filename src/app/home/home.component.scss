@@ -1,5 +1,5 @@
 
-.page-bg {
+#page-bg {
     background-image: url("/assets/1.png");
 
     height: 100%;
@@ -46,12 +46,14 @@
             position: relative;
             top: -6px;
             font-size: 10pt;
-            margin-top: 0;
-            padding-top: 0;
         }
 
         &:hover {
             background-color: #40af51;
         }
     }
+}
+
+#test:hover ~ #page-bg {
+    background-image: url("/assets/2.png");
 }
