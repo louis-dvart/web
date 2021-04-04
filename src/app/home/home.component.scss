@@ -40,6 +40,8 @@
         h1 {
             font-size: 22pt;
             margin: 0;
+            position: relative;
+            top: 4px;
             span {
                 position: relative;
                 top: -2px;
@@ -51,8 +53,8 @@
         span {
             font-family: 'franklin-medium';
             position: relative;
-            top: -11px;
-            font-size: 11pt;
+            top: -8px;
+            font-size: 10pt;
         }
 
         &:hover.music {
