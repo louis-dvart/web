@@ -7,18 +7,28 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-    set_music() {
-
+    set_music() : void {
+        const el = document.getElementById('page-bg')
+        if (el)
+            el.style.backgroundImage = "url('/assets/1.png')";
     }
 
-    set_clips() {
-
+    set_clips() : void {
+        const el = document.getElementById('page-bg')
+        if (el)
+            el.style.backgroundImage = "url('/assets/2.png')";
     }
 
-    set_store() {
+    set_store() : void {
+        const el = document.getElementById('page-bg')
+        if (el)
+            el.style.backgroundImage = "url('/assets/3.png')";
     }
 
-    set_about() {
+    set_about() : void {
+        const el = document.getElementById('page-bg')
+        if (el)
+            el.style.backgroundImage = "url('/assets/4.png')";
     }
 
 }
