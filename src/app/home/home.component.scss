@@ -30,15 +30,15 @@
         align-items: left;
         justify-content: center;
         flex-direction: column;
-        padding-right: 70px;
-        padding-left: 20px;
+        padding-right: 5vw;
+        padding-left: 1vw;
 
         color: white;
         font-family: 'akzidenz-boldextended';
         transition: background-color .3s;
 
         h1 {
-            font-size: 22pt;
+            font-size: 1.6vw;
             margin: 0;
             position: relative;
             top: 4px;
@@ -46,7 +46,7 @@
                 position: relative;
                 top: -2px;
                 font-family: 'japuna';
-                font-size: 18pt;
+                font-size: 1.2vw;
             }
         }
 
@@ -54,7 +54,7 @@
             font-family: 'franklin-medium';
             position: relative;
             top: -8px;
-            font-size: 10pt;
+            font-size: .8vw;
         }
 
         &:hover.music {
