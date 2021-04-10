@@ -1,32 +1,26 @@
 
-<video #videoElement id="video-element" src="assets/1.mp4" type="video/mp4" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true"></video>
+<video class="videos display-video" src="assets/1.mp4" type="video/mp4" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true"></video>
+<video class="videos" src="assets/2.mp4" type="video/mp4" loop autoplay muted onloadedmetadata="this.muted = true"></video>
+<video class="videos" src="assets/3.mp4" type="video/mp4" loop autoplay muted onloadedmetadata="this.muted = true"></video>
+<video class="videos" src="assets/4.mp4" type="video/mp4" loop autoplay muted onloadedmetadata="this.muted = true"></video>
 
 <div class="navbar">
 	<div (mouseover)='set_bg(1)' class="navbar-item music" routerLink="music">
-		<div>
-			<h1>MUSIC <span>音楽</span></h1>
-			<span>STREAM</span>
-		</div>
+		<h1>MUSIC <span>音楽</span></h1>
+		<span>STREAM</span>
 	</div>
 	<div (mouseover)='set_bg(2)' class="navbar-item clips" (click)="go_to_youtube()">
-		<div>
-			<h1>VIDEOS <span>ビデオ</span></h1>
-			<span>WATCH</span>
-		</div>
+		<h1>VIDEOS <span>ビデオ</span></h1>
+		<span>WATCH</span>
 	</div>
 	<div (mouseover)='set_bg(3)' class="navbar-item store" routerLink="store">
-		<div>
-			<h1>STORE <span>お店</span></h1>
-			<span>MERCH</span>
-		</div>
+		<h1>STORE <span>お店</span></h1>
+		<span>MERCH</span>
 	</div>
 	<div (mouseover)='set_bg(4)' class="navbar-item about" routerLink="about">
-		<div>
-			<h1>ABOUT <span>約</span></h1>
-			<span>INFO</span>
-		</div>
+		<h1>ABOUT <span>約</span></h1>
+		<span>INFO</span>
 	</div>
-
 </div>
 
 

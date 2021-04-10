@@ -1,4 +1,4 @@
-#video-element {
+.videos {
     position: fixed;
     overflow: hidden;
     height: 100%;
@@ -7,6 +7,13 @@
     left: 50%; /* % of surrounding element */
     top: 50%;
     transform: translate(-50%, -50%); /* % of current element */
+    background-color: black !important;
+    opacity: 0;
+    transition: opacity 1s;
+
+    &.display-video {
+        opacity: 1;
+    }
 }
 
 .navbar {
