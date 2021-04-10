@@ -15,12 +15,11 @@ export class HomeComponent {
     }
 
     @ViewChild('videoElement') videoElement!: ElementRef;
-    @ViewChild('sourceElement') sourceElement!: ElementRef;
 
     set_bg(val: Number) : void {
         HomeComponent.current_source = "assets/" + val + ".mp4"
-        if (! this.sourceElement.nativeElement.src.endsWith(HomeComponent.current_source)) {
-            this.sourceElement.nativeElement.src = HomeComponent.current_source;
+        if (! this.videoElement.nativeElement.src.endsWith(HomeComponent.current_source)) {
+            this.videoElement.nativeElement.src = HomeComponent.current_source;
             this.videoElement.nativeElement.load();
         }
     }
