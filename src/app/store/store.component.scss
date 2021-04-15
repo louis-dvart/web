@@ -1,5 +1,33 @@
-.top-banner {
-    position: fixed;
-    height: 100%;
-    min-width: 100%;
+.background {
+	position: fixed;
+	height: 100%;
+	min-width: 100%;
+}
+
+.header-icon {
+	--icon-width: 300px;
+	position: absolute;
+	top: 0px;
+	width: var(--icon-width);
+	left: calc(50% - var(--icon-width)/2);
+}
+
+.header {
+	color: white;
+	font-family: 'akzidenz-boldextended';
+	text-align: center;
+	position: relative;
+	top: 220px;
+
+	h1 {
+		font-size: 28px;
+		margin: auto;
+		position: relative;
+		span {
+			position: relative;
+			top: -2px;
+			font-family: 'japuna';
+			font-size: 21px;
+		}
+	}
 }

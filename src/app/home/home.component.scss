@@ -1,86 +1,88 @@
 .videos {
-    position: fixed;
-    overflow: hidden;
-    height: 100%;
-    min-width: 100%;
-    min-height: 56.25vw; /* 100 * 9 / 16 */
-    left: 50%; /* % of surrounding element */
-    top: 50%;
-    transform: translate(-50%, -50%); /* % of current element */
-    background-color: black !important;
-    opacity: 0;
-    transition: opacity 1s;
+	position: fixed;
+	overflow: hidden;
+	height: 100%;
+	min-width: 100%;
+	min-height: 56.25vw; /* 100 * 9 / 16 */
+	left: 50%; /* % of surrounding element */
+	top: 50%;
+	transform: translate(-50%, -50%); /* % of current element */
+	background-color: black !important;
+	opacity: 0;
+	transition: opacity 1s;
 
-    &.display-video {
-        opacity: 1;
-    }
+	&.display-video {
+		opacity: 1;
+	}
 }
 
 .navbar {
-    --banner-height: 80px;
-    --banner-color: rgba(0,0,0,.7);
+	--banner-height: 80px;
+	--banner-color: rgba(0,0,0,.7);
 
-    position: absolute;
-    top: calc(50% - var(--banner-height)/2 );
-    width: 100%;
-    height: var(--banner-height);
-    background-color: var(--banner-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	position: absolute;
+	top: calc(50% - var(--banner-height)/2 );
+	width: 100%;
+	height: var(--banner-height);
+	background-color: var(--banner-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-    &-item {
-        height: 100%;
-        width: 230px;
-        cursor: pointer;
-        display: flex;
-        align-items: left;
-        justify-content: center;
-        flex-direction: column;
-        padding-right: 5vw;
-        padding-left: 1vw;
+	&-item {
+		height: 100%;
+		width: 230px;
+		cursor: pointer;
+		display: flex;
+		align-items: left;
+		justify-content: center;
+		flex-direction: column;
+		padding-right: 5vw;
+		padding-left: 1vw;
 
-        color: white;
-        font-family: 'akzidenz-boldextended';
-        transition: background-color .3s;
+		color: white;
+		font-family: 'akzidenz-boldextended';
+		transition: background-color .3s;
 
-        h1 {
-            font-size: 28px;
-            margin: 0;
-            position: relative;
-            top: 4px;
-            span {
-                position: relative;
-                top: -2px;
-                font-family: 'japuna';
-                font-size: 21px;
-            }
-        }
+		h1 {
+			font-size: 28px;
+			margin: 0;
+			position: relative;
+			top: 4px;
+			span {
+				position: relative;
+				top: -2px;
+				font-family: 'japuna';
+				font-size: 21px;
+			}
+		}
 
-        span {
-            font-family: 'franklin-medium';
-            position: relative;
-            top: -8px;
-            font-size: 14px;
-        }
+		span {
+			font-family: 'franklin-medium';
+			position: relative;
+			top: -8px;
+			font-size: 14px;
+		}
 
-        &:hover.music {
-            background-color: #0aff00;
-        }
-        &:hover.clips {
-            background-color: #0030ff;
-        }
-        &:hover.store {
-            background-color: #ff0000;
-        }
-        &:hover.about {
-            background-color: #fe00ff;
-        }
-    }
+		&:hover.music {
+			background-color: #0aff00;
+		}
+		&:hover.clips {
+			background-color: #0030ff;
+		}
+		&:hover.store {
+			background-color: #ff0000;
+		}
+		&:hover.about {
+			background-color: #fe00ff;
+		}
+	}
 }
 
 .footer-icon {
-    position:fixed;
-    bottom:0px;
-    left:50%;
+	--icon-width: 140px;
+	position: fixed;
+	bottom: 0px;
+	width: var(--icon-width);
+	left: calc(50% - var(--icon-width)/2);
 }
