@@ -30,6 +30,6 @@ export class HomeComponent implements AfterViewInit {
     }
 
     go_to_youtube() : void {
-        window.location.href='https://www.youtube.com/channel/UCLXanXoT1vqHnqqIF8AZJqw';
+        window.location.href='https://www.youtube.com/watch?v=A2Keszteelg&list=PLJipLc0D7d9ReZYUE4QTzbLtfx6Kxz6yy';
     }
 }

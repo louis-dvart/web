@@ -1,27 +1,25 @@
 .background {
 	position: fixed;
-	height: 100%;
-	min-width: 100%;
+	width: 100%;
 }
 
-.header-icon {
-	--icon-width: 300px;
-	position: absolute;
-	top: 0px;
-	width: var(--icon-width);
-	left: calc(50% - var(--icon-width)/2);
-}
 
 .header {
 	color: white;
 	font-family: 'akzidenz-boldextended';
 	text-align: center;
 	position: relative;
-	top: 220px;
+	top: 120px;
+
+	.header-icon {
+		--icon-width: 350px;
+		width: var(--icon-width);
+		left: calc(50% - var(--icon-width)/2);
+	}
 
 	h1 {
-		font-size: 28px;
-		margin: auto;
+		font-size: 20px;
+		margin-top: -10px;
 		position: relative;
 		span {
 			position: relative;
