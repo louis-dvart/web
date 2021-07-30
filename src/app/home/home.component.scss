@@ -34,6 +34,7 @@ $navbar-height: 100px;
 
 .top-logo {
     width: 240px;
+	transition: width 1s;
 }
 
 .panel {
@@ -79,19 +80,19 @@ $navbar-height: 100px;
     width: 100%;
     overflow: hidden;
     object-fit: cover;
-    opacity: 40%;
+    opacity: 0.4;
     transition: opacity .5s;
 
     &:hover {
-        opacity: 70%;
+        opacity: 0.7;
     }
 }
 
 .scroll-arrow {
     position: fixed;
-    bottom: 1%;
+	bottom: 3%;
     left: 50%;
-    width: 100px;
+    width: 20px;
 }
 
 @media screen and (max-width: 1080px) {
@@ -103,6 +104,10 @@ $navbar-height: 100px;
             display: none;
         }
     }
+
+	.top-logo {
+		width: 160px;
+	}
 
     .menu-icon {
         display: inherit;
