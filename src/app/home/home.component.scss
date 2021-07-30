@@ -1,88 +1,55 @@
-.videos {
-	position: fixed;
-	overflow: hidden;
-	height: 100%;
-	min-width: 100%;
-	min-height: 56.25vw; /* 100 * 9 / 16 */
-	left: 50%; /* % of surrounding element */
-	top: 50%;
-	transform: translate(-50%, -50%); /* % of current element */
-	background-color: black !important;
-	opacity: 0;
-	transition: opacity 1s;
-
-	&.display-video {
-		opacity: 1;
-	}
-}
+// .videos {
+//  position: fixed;
+//  overflow: hidden;
+//  height: 100%;
+//  min-width: 100%;
+//  min-height: 56.25vw; /* 100 * 9 / 16 */
+//  left: 50%; /* % of surrounding element */
+//  top: 50%;
+//  transform: translate(-50%, -50%); /* % of current element */
+//  background-color: black !important;
+//  opacity: 0;
+//  transition: opacity 1s;
+//  &.display-video {
+//      opacity: 1;
+//  }
+// }
 
 .navbar {
-	--banner-height: 80px;
-	--banner-color: rgba(0,0,0,.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 
-	position: absolute;
-	top: calc(50% - var(--banner-height)/2 );
-	width: 100%;
-	height: var(--banner-height);
-	background-color: var(--banner-color);
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    &-item {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-right: 5vw;
+        margin-left: 5vw;
 
-	&-item {
-		height: 100%;
-		width: 230px;
-		cursor: pointer;
-		display: flex;
-		align-items: left;
-		justify-content: center;
-		flex-direction: column;
-		padding-right: 5vw;
-		padding-left: 1vw;
+        color: white;
+        font-family: 'normal';
+        font-size: 8pt;
+    }
 
-		color: white;
-		font-family: 'akzidenz-boldextended';
-		transition: background-color .3s;
-
-		h1 {
-			font-size: 28px;
-			margin: 0;
-			position: relative;
-			top: 4px;
-			span {
-				position: relative;
-				top: -2px;
-				font-family: 'japuna';
-				font-size: 21px;
-			}
-		}
-
-		span {
-			font-family: 'franklin-medium';
-			position: relative;
-			top: -8px;
-			font-size: 14px;
-		}
-
-		&:hover.music {
-			background-color: #0aff00;
-		}
-		&:hover.clips {
-			background-color: #0030ff;
-		}
-		&:hover.store {
-			background-color: #ff0000;
-		}
-		&:hover.about {
-			background-color: #fe00ff;
-		}
-	}
+    &-divisor {
+        width: 50px;
+    }
 }
 
-.footer-icon {
-	--icon-width: 140px;
-	position: fixed;
-	bottom: 50px;
-	width: var(--icon-width);
-	left: calc(50% - var(--icon-width)/2);
+.top-logo {
+    width: 240px;
+}
+
+@media screen and (max-width: 1080px) {
+    .navbar{
+        &-item {
+            display: none;
+        }
+        &-divisor {
+            display: none;
+        }
+    }
 }
