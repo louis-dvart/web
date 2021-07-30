@@ -54,13 +54,11 @@ $navbar-height: 100px;
     &-left {
         width: 50%;
         float: left;
-        background-color: red;
     }
 
     &-right {
         width: 50%;
         float: right;
-        background-color: green;
     }
     height: calc(100% - #{$navbar-height});
 }
@@ -68,6 +66,5 @@ $navbar-height: 100px;
 .videos {
     height: 100%;
     width: 100%;
-    background-color: black !important;
 }
 
