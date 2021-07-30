@@ -29,10 +29,69 @@ $navbar-height: 100px;
     display: none;
     position: absolute;
     left: 30px;
+    cursor: pointer;
 }
 
 .top-logo {
     width: 240px;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - #{$navbar-height});
+    &-left {
+        width: 50%;
+        float: left;
+    }
+
+    &-right {
+        width: 50%;
+        float: right;
+    }
+
+    &-headers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        color: white;
+    }
+
+    &-header {
+        font-family: 'iron-shark';
+        font-size: 4vw;
+        margin: 0;
+    }
+
+    &-subheader {
+        font-family: 'normal';
+        font-size: 1.2vw;
+        margin: 0;
+    }
+}
+
+.videos {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    opacity: 40%;
+    transition: opacity .5s;
+
+    &:hover {
+        opacity: 70%;
+    }
+}
+
+.scroll-arrow {
+    position: fixed;
+    bottom: 1%;
+    left: 50%;
+    width: 100px;
 }
 
 @media screen and (max-width: 1080px) {
@@ -48,55 +107,24 @@ $navbar-height: 100px;
     .menu-icon {
         display: inherit;
     }
-}
 
-.panel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    &-left {
-        width: 50%;
-        float: left;
-    }
+    .panel {
+        &-left {
+            width: 100%;
+            float: left;
+        }
 
-    &-right {
-        width: 50%;
-        float: right;
-    }
-    height: calc(100% - #{$navbar-height});
+        &-right {
+            width: 100%;
+            float: right;
+        }
 
-    &-headers {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        color: white;
-    }
+        &-header {
+            font-size: 7vw;
+        }
 
-    &-header {
-        font-family: 'iron-shark';
-        font-size: 60pt;
-        margin: 0;
-    }
-
-    &-subheader {
-        font-family: 'normal';
-        font-size: 17pt;
-        margin: 0;
-    }
-}
-
-.videos {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    object-fit: cover;
-    opacity: 40%;
-    transition: opacity .5s;
-
-    &:hover {
-        opacity: 70%;
+        &-subheader {
+            font-size: 2.1vw;
+        }
     }
 }

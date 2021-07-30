@@ -1,4 +1,4 @@
-import { Component, ElementRef, AfterViewInit} from '@angular/core';
+import { Component, AfterViewInit, HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,15 +6,26 @@ import { Component, ElementRef, AfterViewInit} from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements AfterViewInit {
-    video_elements: HTMLVideoElement[] = [];
+    scrollFlag: boolean = false;
 
-    constructor(private elem: ElementRef){}
+    constructor(){}
 
     ngAfterViewInit(): void {
-        // this.video_elements = this.elem.nativeElement.querySelectorAll('.videos');
-        // for (const elem of this.video_elements) {
-        //     elem.pause();
-        // }
+    }
+
+    @HostListener('window:scroll', ['$event']) scrollEvent() {
+        this.setScrollFlag();
+    }
+
+    @HostListener('window:resize', ['$event']) resizeEvent() {
+        this.setScrollFlag();
+    }
+
+    setScrollFlag() : void {
+        if ((window.innerHeight - window.pageYOffset) / window.innerHeight < .25)
+            this.scrollFlag = false;
+        else
+            this.scrollFlag = true;
     }
 
     go_to_youtube() : void {
