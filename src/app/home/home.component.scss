@@ -58,13 +58,11 @@ $navbar-height: 100px;
     &-left {
         width: 50%;
         float: left;
-        background-color: cyan;
     }
 
     &-right {
         width: 50%;
         float: right;
-        background-color: red;
     }
     height: calc(100% - #{$navbar-height});
 
@@ -93,4 +91,12 @@ $navbar-height: 100px;
 .videos {
     height: 100%;
     width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    opacity: 40%;
+    transition: opacity .5s;
+
+    &:hover {
+        opacity: 70%;
+    }
 }
