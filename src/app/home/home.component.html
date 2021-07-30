@@ -1,19 +1,27 @@
 <div class="navbar">
-	<div class="navbar-item music" routerLink="music">
-		<h1>MUSIC</h1>
-	</div>
-	<img class="navbar-divisor" src="assets/divisor.png" alt="">
-	<div class="navbar-item clips" (click)="go_to_youtube()">
-		<h1>VIDEOS</h1>
-	</div>
-	<img class="top-logo" src="assets/logo.png" alt="">
-	<div class="navbar-item shop" routerLink="shop">
-		<h1>SHOP</h1>
-	</div>
-	<img class="navbar-divisor" src="assets/divisor.png" alt="">
-	<div class="navbar-item about" routerLink="about">
-		<h1>ABOUT</h1>
-	</div>
+    <img class="menu-icon" src="assets/menu.png" alt="">
+    <div class="navbar-item music" routerLink="music">
+        <h1>MUSIC</h1>
+    </div>
+    <img class="navbar-divisor" src="assets/divisor.png" alt="">
+    <div class="navbar-item clips" (click)="go_to_youtube()">
+        <h1>VIDEOS</h1>
+    </div>
+    <img class="top-logo" src="assets/logo.png" alt="">
+    <div class="navbar-item shop" routerLink="shop">
+        <h1>SHOP</h1>
+    </div>
+    <img class="navbar-divisor" src="assets/divisor.png" alt="">
+    <div class="navbar-item about" routerLink="about">
+        <h1>ABOUT</h1>
+    </div>
 </div>
 
+<div class="panel panel-left">
+    <video class="videos" src="assets/1.mp4" type="video/mp4" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true"></video>
+</div>
+
+<div class="panel panel-right">
+    <video class="videos" src="assets/2.mp4" type="video/mp4" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true"></video>
+</div>
 

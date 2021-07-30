@@ -1,25 +1,10 @@
-// .videos {
-//  position: fixed;
-//  overflow: hidden;
-//  height: 100%;
-//  min-width: 100%;
-//  min-height: 56.25vw; /* 100 * 9 / 16 */
-//  left: 50%; /* % of surrounding element */
-//  top: 50%;
-//  transform: translate(-50%, -50%); /* % of current element */
-//  background-color: black !important;
-//  opacity: 0;
-//  transition: opacity 1s;
-//  &.display-video {
-//      opacity: 1;
-//  }
-// }
+$navbar-height: 100px;
 
 .navbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    height: $navbar-height;
 
     &-item {
         cursor: pointer;
@@ -39,6 +24,13 @@
     }
 }
 
+.menu-icon {
+    width: 50px;
+    display: none;
+    position: absolute;
+    left: 30px;
+}
+
 .top-logo {
     width: 240px;
 }
@@ -52,4 +44,30 @@
             display: none;
         }
     }
+
+    .menu-icon {
+        display: inherit;
+    }
 }
+
+.panel {
+    &-left {
+        width: 50%;
+        float: left;
+        background-color: red;
+    }
+
+    &-right {
+        width: 50%;
+        float: right;
+        background-color: green;
+    }
+    height: calc(100% - #{$navbar-height});
+}
+
+.videos {
+    height: 100%;
+    width: 100%;
+    background-color: black !important;
+}
+
