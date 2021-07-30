@@ -25,7 +25,7 @@ $navbar-height: 100px;
 }
 
 .menu-icon {
-    width: 50px;
+    width: 30px;
     display: none;
     position: absolute;
     left: 30px;
@@ -51,20 +51,46 @@ $navbar-height: 100px;
 }
 
 .panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     &-left {
         width: 50%;
         float: left;
+        background-color: cyan;
     }
 
     &-right {
         width: 50%;
         float: right;
+        background-color: red;
     }
     height: calc(100% - #{$navbar-height});
+
+    &-headers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        color: white;
+    }
+
+    &-header {
+        font-family: 'iron-shark';
+        font-size: 60pt;
+        margin: 0;
+    }
+
+    &-subheader {
+        font-family: 'normal';
+        font-size: 17pt;
+        margin: 0;
+    }
 }
 
 .videos {
     height: 100%;
     width: 100%;
 }
-
