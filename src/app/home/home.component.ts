@@ -28,6 +28,9 @@ export class HomeComponent implements AfterViewInit {
             this.scrollFlag = true;
     }
 
+    toogleSideMenu(event : any) : void {
+    }
+
     go_to_youtube() : void {
         window.location.href='https://www.youtube.com/watch?v=A2Keszteelg&list=PLJipLc0D7d9ReZYUE4QTzbLtfx6Kxz6yy';
     }

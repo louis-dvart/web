@@ -17,11 +17,33 @@ $navbar-height: 100px;
         color: white;
         font-family: 'normal';
         font-size: 8pt;
+
+        opacity: 0.8;
+        transition: opacity .5s;
+        &:hover {
+            opacity: 1;
+        }
     }
 
     &-divisor {
         width: 50px;
     }
+}
+
+.side-navbar {
+    position: absolute;
+    z-index: 10;
+    background-color: black;
+    height: 100%;
+    width: 300px;
+}
+.side-navbar-scrim {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 2;
 }
 
 .menu-icon {
@@ -30,11 +52,16 @@ $navbar-height: 100px;
     position: absolute;
     left: 30px;
     cursor: pointer;
+    opacity: 0.8;
+    transition: opacity .5s;
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .top-logo {
     width: 240px;
-	transition: width 1s;
+    transition: width 1s;
 }
 
 .panel {
@@ -44,13 +71,15 @@ $navbar-height: 100px;
     justify-content: center;
     height: calc(100% - #{$navbar-height});
     &-left {
-        width: 50%;
         float: left;
+        width: 50%;
+        transition: width .5s;
     }
 
     &-right {
-        width: 50%;
         float: right;
+        width: 50%;
+        transition: width .5s;
     }
 
     &-headers {
@@ -90,14 +119,14 @@ $navbar-height: 100px;
 
 .scroll-arrow {
     position: fixed;
-	bottom: 3%;
-    left: 50%;
+    bottom: 3%;
     width: 20px;
+    left: calc(50% - 10px);
 }
 
 @media screen and (max-width: 1080px) {
     .navbar{
-        &-item {
+        &-item.navbar-top {
             display: none;
         }
         &-divisor {
@@ -105,9 +134,9 @@ $navbar-height: 100px;
         }
     }
 
-	.top-logo {
-		width: 160px;
-	}
+    .top-logo {
+        width: 160px;
+    }
 
     .menu-icon {
         display: inherit;
