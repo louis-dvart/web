@@ -1,14 +1,15 @@
-import { Component, AfterViewInit, HostListener} from '@angular/core';
+import { Component, AfterViewInit, HostListener, ElementRef} from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements AfterViewInit {
-    scrollFlag: boolean = false;
+    isScrollArrowShown: boolean = false;
+    isSideMenuOpen: boolean = false;
 
-    constructor(){}
+    constructor(private elem: ElementRef){}
 
     ngAfterViewInit(): void {
     }
@@ -22,13 +23,18 @@ export class HomeComponent implements AfterViewInit {
     }
 
     setScrollFlag() : void {
-        if ((window.innerHeight - window.pageYOffset) / window.innerHeight < .25)
-            this.scrollFlag = false;
-        else
-            this.scrollFlag = true;
+         this.isScrollArrowShown = !((window.innerHeight - window.pageYOffset) / window.innerHeight < .25)
     }
 
     toogleSideMenu(event : any) : void {
+        this.isSideMenuOpen = ! this.isSideMenuOpen;
+        if (this.isSideMenuOpen) {
+            this.elem.nativeElement.querySelectorAll('.side-navbar')[0].classList.add('open');
+            this.elem.nativeElement.querySelectorAll('.side-navbar-scrim')[0].classList.add('open');
+        } else {
+            this.elem.nativeElement.querySelectorAll('.side-navbar')[0].classList.remove('open')
+            this.elem.nativeElement.querySelectorAll('.side-navbar-scrim')[0].classList.remove('open')
+        }
     }
 
     go_to_youtube() : void {
