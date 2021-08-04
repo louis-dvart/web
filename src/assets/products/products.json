@@ -1,0 +1,14 @@
+[
+	{
+		"name": "chain fatela",
+		"description": "uma chain toda fatelona",
+		"price": "2 ADA",
+		"img": "assets/products/chain.jpg"
+	},
+	{
+		"name": "tshirt gay",
+		"description": "shirt memo gayzola",
+		"price": "3 ADA",
+		"img": "assets/products/shirt.jpeg"
+	}
+]

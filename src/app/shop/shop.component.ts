@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from './item/item.component';
+import * as products from '../../assets/products/products.json';
 
 @Component({
 	selector: 'app-shop',
@@ -16,50 +17,14 @@ export class ShopComponent implements OnInit {
 	}
 
 	loadShopItems() : void {
-		this.shopItems = [
-			{
-				name: "corrente ",
-				price:"2 ADA",
-				img:"assets/products/chain/cover.jpg",
-				description: ""
-			},
-			{
-				name: "shirt",
-				price:"2 ADA",
-				img:"assets/products/shirt/cover.jpeg",
-				description: ""
-			},
-			{
-				name: "corrente ",
-				price:"2 ada",
-				img:"assets/products/chain/cover.jpg",
-				description: ""
-			},
-			{
-				name: "corrente ",
-				price:"2 ada",
-				img:"assets/products/chain/cover.jpg",
-				description: ""
-			},
-			{
-				name: "corrente ",
-				price:"2 ADA",
-				img:"assets/products/chain/cover.jpg",
-				description: ""
-			},
-			{
-				name: "shirt",
-				price:"2 ADA",
-				img:"assets/products/shirt/cover.jpeg",
-				description: ""
-			},
-			{
-				name: "shirt",
-				price:"2 ADA",
-				img:"assets/products/shirt/cover.jpeg",
-				description: ""
-			},
-		]
+		for (let p of (products as any).default) {
+			this.shopItems.push({
+				name: p['name'],
+				price:p['price'],
+				img:p['img'],
+				description: p['description']
+			});
+		}
 	}
 
 }
