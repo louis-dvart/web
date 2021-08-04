@@ -2,6 +2,8 @@
     position: relative;
     width: 420px;
     height: 550px;
+    margin: 20px;
+    cursor: pointer;
 }
 .item {
     &-name {
@@ -12,16 +14,28 @@
         height: 15px;
         width: 15px;
         position: absolute;
-        top: -10px;
+        top: -20px;
         right: 40px;
-    }
-    &-price {
-        color: white;
-        font-family: 'normal';
     }
     &-cover-image {
         width: 350px;
-        height: 500px;
+        height: 450px;
         object-fit: cover;
+    }
+
+    &-price-container {
+        display: flex;
+    }
+    &-price {
+        display: inline-block;
+        color: white;
+        font-family: 'normal';
+    }
+    &-ada-logo {
+        width: 30px;
+        filter: saturate(0) brightness(100);
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 15px;
     }
 }
