@@ -6,6 +6,11 @@
     align-items: center;
     justify-content: center;
     height: calc(100% - #{$navbar-height});
+
+    &:hover > .videos {
+        opacity: 0.7;
+    }
+
     &-left {
         float: left;
         width: 50%;
@@ -47,10 +52,6 @@
     object-fit: cover;
     opacity: 0.4;
     transition: opacity .5s;
-
-    &:hover {
-        opacity: 0.7;
-    }
 }
 
 .scroll-arrow {
