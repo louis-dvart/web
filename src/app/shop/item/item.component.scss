@@ -1,0 +1,27 @@
+.item-container {
+    position: relative;
+    width: 420px;
+    height: 550px;
+}
+.item {
+    &-name {
+        color: white;
+        font-family: 'iron-shark';
+        transform: rotate(90deg);
+        line-height: 15px;
+        height: 15px;
+        width: 15px;
+        position: absolute;
+        top: -10px;
+        right: 40px;
+    }
+    &-price {
+        color: white;
+        font-family: 'normal';
+    }
+    &-cover-image {
+        width: 350px;
+        height: 500px;
+        object-fit: cover;
+    }
+}

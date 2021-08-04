@@ -1,4 +1,7 @@
-<img class="background" src="assets/storebg.png" alt="">
-
 <h1 class="header">STORE</h1>
 
+<div class="shop-body">
+	<div class="items-container">
+		<shop-item *ngFor="let i of this.shopItems" [item]="i"></shop-item>
+	</div>
+</div>
