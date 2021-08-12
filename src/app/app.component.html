@@ -8,7 +8,7 @@
         <h1>VIDEOS</h1>
     </div>
     <img class="top-logo" src="assets/logo.png" alt="">
-    <div class="navbar-item navbar-top" routerLink="shop">
+    <div class="navbar-item navbar-top" (click)="scrollTo(shop)">
         <h1>SHOP</h1>
     </div>
     <img class="navbar-divisor" src="assets/divisor.png" alt="">
@@ -24,7 +24,7 @@
     <div class="navbar-item" (click)="go_to_youtube()">
         <h1>VIDEOS</h1>
     </div>
-    <div class="navbar-item" routerLink="shop">
+    <div class="navbar-item" href="#shop">
         <h1>SHOP</h1>
     </div>
     <div class="navbar-item" routerLink="about">
@@ -33,4 +33,6 @@
 </div>
 <div class="side-navbar-scrim" (click)="toogleSideMenu($event)"></div>
 
-<router-outlet></router-outlet>
+<app-home></app-home>
+<div #shop></div>
+<app-shop></app-shop>

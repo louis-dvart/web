@@ -7,6 +7,7 @@ import { ItemComponent } from './item/item.component';
 @NgModule({
 	imports: [ BrowserModule ],
 	declarations: [ ShopComponent , ItemComponent ],
-	bootstrap: [ ShopComponent ]
+	bootstrap: [ ShopComponent ],
+	exports: [ ShopComponent ]
 })
 export class ShopModule { }

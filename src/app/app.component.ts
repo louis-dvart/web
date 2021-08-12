@@ -23,6 +23,12 @@ export class AppComponent {
         }
     }
 
+    scrollTo(el : HTMLElement) {
+        const y: number = el.getBoundingClientRect().top + window.pageYOffset;
+        console.log(y);
+        window.scrollTo({top: y, behavior: 'smooth'});
+    }
+
     go_to_youtube() : void {
         window.location.href='https://www.youtube.com/watch?v=A2Keszteelg&list=PLJipLc0D7d9ReZYUE4QTzbLtfx6Kxz6yy';
     }
