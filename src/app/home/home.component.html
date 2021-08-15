@@ -1,17 +1,3 @@
-<div class="panel panel-left">
-    <video class="videos" src="assets/1.mp4" type="video/mp4" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true"></video>
-    <div class="panel-headers">
-        <h1 class="panel-header">NEW MUSIC</h1>
-        <h2 class="panel-subheader">MOTOR - OUT NOW</h2>
-    </div>
-</div>
-
-<div class="panel panel-right">
-    <video class="videos" src="assets/2.mp4" type="video/mp4" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true"></video>
-    <div class="panel-headers">
-        <h1 class="panel-header">SHOP DVART</h1>
-        <h2 class="panel-subheader">OUTWEAR - ACCESSORIES - SHIRTS</h2>
-    </div>
-</div>
-
-<img *ngIf="isScrollArrowShown" class="scroll-arrow" src="assets/arrow.png" alt="">
+<app-main></app-main>
+<div #shop></div>
+<app-shop></app-shop>

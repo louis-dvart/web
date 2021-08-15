@@ -1,32 +1,37 @@
 [
 	{
+		"id": 10,
 		"name": "chain fatela",
 		"description": "uma chain toda fatelona",
 		"price": "2 €",
-		"img": "assets/products/chain.jpg"
+		"img": "assets/products/gold.png"
 	},
 	{
-		"name": "tshirt gay",
-		"description": "shirt memo gayzola",
-		"price": "99999 €",
-		"img": "assets/products/shirt.jpeg"
-	},
-	{
+		"id": 11,
 		"name": "tshirt gay",
 		"description": "shirt memo gayzola",
 		"price": "2 €",
-		"img": "assets/products/shirt.jpeg"
+		"img": "assets/products/gold.png"
 	},
 	{
+		"id": 12,
+		"name": "tshirt gay",
+		"description": "shirt memo gayzola",
+		"price": "2 €",
+		"img": "assets/products/gold.png"
+	},
+	{
+		"id": 13,
 		"name": "tshirt gay",
 		"description": "shirt memo gayzola",
 		"price": "3 €",
-		"img": "assets/products/shirt.jpeg"
+		"img": "assets/products/gold.png"
 	},
 	{
+		"id": 14,
 		"name": "chain fatela",
 		"description": "uma chain toda fatelona",
 		"price": "3 €",
-		"img": "assets/products/chain.jpg"
+		"img": "assets/products/gold.png"
 	}
 ]

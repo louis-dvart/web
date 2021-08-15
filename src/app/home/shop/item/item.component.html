@@ -1,4 +1,4 @@
-<div class="item-container">
+<div class="item-container" [routerLink]="['/product', item.id]">
 	<img class="item-cover-image" src="{{ item.img }}" alt="">
 	<h1 class="item-name">{{ item.name }}</h1>
 	<div class="item-price-container">
