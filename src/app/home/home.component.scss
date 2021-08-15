@@ -1,8 +1,10 @@
 @import '../app.component';
+@import '~src/globals';
 
 :host {
     display: block;
     height: 100vh;
+    padding-top: $navbar-height;
 }
 
 .panel {

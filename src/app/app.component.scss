@@ -1,7 +1,8 @@
-$navbar-height: 100px;
-
+@import '~src/globals';
 .navbar {
-    background-color: black;
+    background-color: #111;
+    position: fixed;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,7 +19,7 @@ $navbar-height: 100px;
 
         color: white;
         font-family: 'normal';
-        font-size: 8pt;
+        font-size: 6pt;
 
         opacity: 0.8;
         transition: opacity .5s;
@@ -28,7 +29,7 @@ $navbar-height: 100px;
     }
 
     &-divisor {
-        width: 50px;
+        width: 35px;
     }
 }
 
@@ -37,7 +38,7 @@ $navbar-height: 100px;
     top: 0;
     left: -300px;
     z-index: 9;
-    background-color: black;
+    background-color: #111;
     height: 100%;
     width: 300px;
     margin-top: $navbar-height;
@@ -63,7 +64,7 @@ $navbar-height: 100px;
 }
 
 .menu-icon {
-    width: 30px;
+    width: 22px;
     display: none;
     position: absolute;
     left: 30px;
@@ -81,7 +82,13 @@ $navbar-height: 100px;
 }
 
 @media screen and (max-width: 1080px) {
+    .side-navbar {
+        padding-top: 30px;
+    }
     .navbar{
+        &-item {
+            line-height: 2;
+        }
         &-item.navbar-top {
             display: none;
         }
