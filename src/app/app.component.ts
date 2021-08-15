@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
     selector: 'app-root',
@@ -14,19 +14,21 @@ export class AppComponent {
 
     toogleSideMenu(event : any) : void {
         this.isSideMenuOpen = ! this.isSideMenuOpen;
-        if (this.isSideMenuOpen) {
-            this.elem.nativeElement.querySelectorAll('.side-navbar')[0].classList.add('open');
-            this.elem.nativeElement.querySelectorAll('.side-navbar-scrim')[0].classList.add('open');
-        } else {
-            this.elem.nativeElement.querySelectorAll('.side-navbar')[0].classList.remove('open')
-            this.elem.nativeElement.querySelectorAll('.side-navbar-scrim')[0].classList.remove('open')
+    }
+
+    scrollToShop() : void {
+        let shopnav = document.getElementById('shop-nav');
+        if (shopnav) {
+            console.log(shopnav.getBoundingClientRect().top - 80);
+            window.scrollTo({
+                top: shopnav.getBoundingClientRect().top - 80,
+                behavior: 'smooth'
+            });
         }
     }
 
-    scrollTo(el : HTMLElement) {
-        const y: number = el.getBoundingClientRect().top + window.pageYOffset;
-        console.log(y);
-        window.scrollTo({top: y, behavior: 'smooth'});
+    scrollToTop() : void{
+        window.scrollTo({top: 0, behavior: 'smooth'});
     }
 
     go_to_youtube() : void {
