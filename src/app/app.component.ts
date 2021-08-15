@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-root',
@@ -10,9 +10,9 @@ export class AppComponent {
 
     isSideMenuOpen: boolean = false;
 
-    constructor(private elem: ElementRef){}
+    constructor(){}
 
-    toogleSideMenu(event : any) : void {
+    toggleSideMenu() : void {
         this.isSideMenuOpen = ! this.isSideMenuOpen;
     }
 

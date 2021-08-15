@@ -1,5 +1,5 @@
 <div class="navbar">
-    <img class="menu-icon" src="assets/menu.png" alt="" (click)="toogleSideMenu($event)">
+    <img class="menu-icon" src="assets/menu.png" alt="" (click)="toggleSideMenu()">
     <div class="navbar-item navbar-top" routerLink="music">
         <h1>MUSIC</h1>
     </div>
@@ -31,6 +31,6 @@
         <h1>ABOUT</h1>
     </div>
 </div>
-<div class="side-navbar-scrim" [class]="isSideMenuOpen ? 'open': ''" (click)="toogleSideMenu($event)"></div>
+<div class="side-navbar-scrim" [class]="isSideMenuOpen ? 'open': ''" (click)="toggleSideMenu()"></div>
 
 <router-outlet></router-outlet>
