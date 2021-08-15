@@ -1,32 +1,43 @@
+$item_width : 400px;
+$item_height: 400px;
+
 .item-container {
     position: relative;
-    width: 330px;
+    width: #{$item_width + 30px};
     margin: 40px;
     cursor: pointer;
+    &:hover > .item-price-container {
+        opacity: 1;
+    }
 }
 .item {
     &-name {
         color: white;
-        font-family: 'iron-shark';
+        font-family: 'normal';
+        font-size: 30px;
+        text-transform: uppercase;
         transform: rotate(90deg);
         width: 600px;
         margin: 0;
         position: absolute;
-        top: 282px;
-        left: 17px;
+        top: 283px;
+        left: #{$item_width - 300px + 17px};
+
     }
     &-cover-image {
-        width: 300px;
-        height: 400px;
+        width: $item_width;
+        height: $item_height;
         object-fit: cover;
     }
 
     &-price-container {
         display: flex;
         height: 40px;
+        opacity: 0;
+        transition: opacity .3s;
     }
     &-price {
-        margin-top: auto;
+        margin-top: -2px;
         margin-bottom: auto;
         color: white;
         font-family: 'normal';
