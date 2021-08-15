@@ -2,13 +2,31 @@
 	{
 		"name": "chain fatela",
 		"description": "uma chain toda fatelona",
-		"price": "2 ADA",
+		"price": "2 €",
 		"img": "assets/products/chain.jpg"
 	},
 	{
 		"name": "tshirt gay",
 		"description": "shirt memo gayzola",
-		"price": "3 ADA",
+		"price": "99999 €",
 		"img": "assets/products/shirt.jpeg"
+	},
+	{
+		"name": "tshirt gay",
+		"description": "shirt memo gayzola",
+		"price": "2 €",
+		"img": "assets/products/shirt.jpeg"
+	},
+	{
+		"name": "tshirt gay",
+		"description": "shirt memo gayzola",
+		"price": "3 €",
+		"img": "assets/products/shirt.jpeg"
+	},
+	{
+		"name": "chain fatela",
+		"description": "uma chain toda fatelona",
+		"price": "3 €",
+		"img": "assets/products/chain.jpg"
 	}
 ]
