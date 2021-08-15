@@ -1,37 +1,44 @@
 [
 	{
 		"id": 10,
-		"name": "chain fatela",
+		"name": "motor t-shirt",
 		"description": "uma chain toda fatelona",
-		"price": "2 €",
-		"img": "assets/products/gold.png"
+		"price": "20,00€",
+		"img": "assets/products/shirt.png"
 	},
 	{
 		"id": 11,
-		"name": "tshirt gay",
+		"name": "motor t-shirt",
 		"description": "shirt memo gayzola",
-		"price": "2 €",
-		"img": "assets/products/gold.png"
+		"price": "20,00€",
+		"img": "assets/products/shirt.png"
 	},
 	{
 		"id": 12,
-		"name": "tshirt gay",
+		"name": "motor t-shirt",
 		"description": "shirt memo gayzola",
-		"price": "2 €",
-		"img": "assets/products/gold.png"
+		"price": "20,00€",
+		"img": "assets/products/shirt.png"
 	},
 	{
 		"id": 13,
-		"name": "tshirt gay",
+		"name": "motor t-shirt",
 		"description": "shirt memo gayzola",
-		"price": "3 €",
-		"img": "assets/products/gold.png"
+		"price": "20,00€",
+		"img": "assets/products/shirt.png"
 	},
 	{
 		"id": 14,
-		"name": "chain fatela",
+		"name": "motor t-shirt",
 		"description": "uma chain toda fatelona",
-		"price": "3 €",
-		"img": "assets/products/gold.png"
+		"price": "20,00€",
+		"img": "assets/products/shirt.png"
+	},
+	{
+		"id": 15,
+		"name": "motor t-shirt",
+		"description": "uma chain toda fatelona",
+		"price": "20,00€",
+		"img": "assets/products/shirt.png"
 	}
 ]

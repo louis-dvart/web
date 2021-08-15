@@ -63,6 +63,18 @@
     }
 }
 
+.bag-icon {
+    width: 22px;
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity .5s;
+    &:hover {
+        opacity: 1;
+    }
+}
+
 .menu-icon {
     width: 22px;
     display: none;

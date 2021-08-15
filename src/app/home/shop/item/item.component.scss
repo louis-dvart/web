@@ -6,7 +6,7 @@ $item_height: 400px;
     width: $item_width;
     margin: 20px;
     cursor: pointer;
-    &:hover > .item-price-container {
+    &:hover > .item-price {
         opacity: 1;
     }
     &::after {
@@ -16,7 +16,7 @@ $item_height: 400px;
         position: absolute;
         top: 0;
         width: 100%;
-        height: 87%;
+        height: 88%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -35,6 +35,7 @@ $item_height: 400px;
         font-family: 'normal';
         font-size: 15px;
         text-transform: uppercase;
+        text-align: center;
         margin: 0;
     }
     &-cover-image {
@@ -42,19 +43,15 @@ $item_height: 400px;
         height: $item_height;
         object-fit: cover;
     }
-
-    &-price-container {
-        display: flex;
-        height: 40px;
-        opacity: 0;
-        transition: opacity .3s;
-    }
     &-price {
         margin-top: 0px;
         margin-bottom: auto;
         color: white;
         font-family: 'normal';
         font-size: 15px;
+        text-align: center;
+        opacity: 0;
+        transition: opacity .3s;
     }
     &-ada-logo {
         width: 30px;
@@ -66,7 +63,7 @@ $item_height: 400px;
 }
 
 @media screen and (max-width: 1080px) {
-    .item-price-container {
+    .item-price {
         opacity: 1;
     }
 }
