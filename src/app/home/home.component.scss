@@ -1,3 +1,5 @@
+$footer_icon_size: 40px;
+
 .footer {
     margin-top: 100px;
     &-banner {
@@ -5,11 +7,14 @@
         height: 300px;
     }
     &-details {
-        margin: 30px 100px 100px 100px;
+        margin: 30px 100px 20px 100px;
         display: flex;
         justify-content: space-between;
         color: white;
         &-item {
+            div {
+                display: inline-flex;
+            }
             text-align: center;
             &:first-child {
                 text-align: left;
@@ -21,10 +26,10 @@
         h2 {
             font-family: 'normal';
             font-size: 20px;
+            margin-bottom: 0px;
         }
         img {
-            width: 40px;
-            margin: 0px 20px 20px 20px;
+            width: $footer_icon_size;
             cursor: pointer;
             opacity: 0.8;
             transition: opacity .3s;
@@ -33,6 +38,9 @@
             }
         }
         a, a:visited {
+            display: flex;
+            align-items: center;
+            height: $footer_icon_size;
             text-decoration: none;
             color: #51fbcb; // LINK COLOR
             font-family: 'normal';
