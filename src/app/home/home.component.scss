@@ -1,3 +1,22 @@
-h1 {
+footer {
+    margin: 100px;
+    text-align: center;
     color: white;
+    h1 {
+        font-family: 'iron-shark';
+        font-size: 30px;
+    }
+    h2 {
+        font-family: 'normal';
+        font-size: 20px;
+        a, a:visited {
+            text-decoration: none;
+            color: #51fbcb;
+        }
+    }
+    img {
+        width: 30px;
+        margin: 20px;
+    }
 }
+
