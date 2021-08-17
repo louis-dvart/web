@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Item } from '../item';
 import * as products from '../../assets/products/products.json';
 
 @Component({
@@ -9,6 +10,7 @@ import * as products from '../../assets/products/products.json';
 })
 export class ProductComponent implements OnInit {
     product_id!: string;
+    product!: Item;
 
     private router: Router;
 
@@ -25,6 +27,13 @@ export class ProductComponent implements OnInit {
     ngOnInit(): void {
         // get route parameters
         this.product_id = String(this.route.snapshot.paramMap.get('pid'));
+        for (let p of (products as any).default)
+            if (p.id == this.product_id)
+                this.product = p;
+        console.log(this.product);
+
+        if (! this.product)
+            this.closeModal();
     }
 }
 

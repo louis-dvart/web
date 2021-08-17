@@ -1,6 +1,8 @@
+@import '~src/globals';
+
 body, html {
   height: 100%;
-  background-color: #0A0A0A;
+  background-color: $dark_color;
   margin: 0;
 }
 

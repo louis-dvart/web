@@ -1,6 +1,6 @@
 @import '~src/globals';
 .navbar {
-    background-color: #111;
+    background-color: $dark2_color;
     position: fixed;
     width: 100%;
     display: flex;
@@ -38,7 +38,7 @@
     top: 0;
     left: -300px;
     z-index: 9;
-    background-color: #111;
+    background-color: $dark2_color;
     height: 100%;
     width: 300px;
     margin-top: $navbar-height;
