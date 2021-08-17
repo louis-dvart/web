@@ -1,5 +1,8 @@
 @import 'src/globals';
 
+$popup_height: 80vh;
+$popup_width: 80vw;
+
 :host {
     background-color: rgba( 0, 0, 0, 0.85 ) ;
     display: flex ;
@@ -22,29 +25,43 @@
 }
 
 .container {
-    width: 80vw;
-    height: 80vh;
+    width: $popup_width;
+    height: $popup_height;
     z-index: 110;
     display: flex;
     background-color: $dark_color;
     color: white;
+    box-shadow: 0px 0px 40px 1px #ffffff44;
+    border-radius: 6px;
+    .close-button {
+        position: absolute;
+        right: #{(100vw - $popup_width)/2};
+        width: 55px;
+        cursor: pointer;
+    }
 
-    img {
+    .product-cover-image {
         height: 100%;
         width: 50%;
         object-fit: contain;
+        margin: 10px;
     }
 
     .details {
         width: 50%;
         padding-left: 50px;
+        padding-right: 55px;
         h1 {
             font-family: 'iron-shark';
             font-size: 40px;
         }
         h2 {
             font-family: 'normal';
-            font-size: 25px;
+            font-size: 22px;
+        }
+        h3 {
+            font-family: 'normal';
+            font-size: 20px;
         }
         .size-selector {
             margin-top: 20px;
@@ -66,6 +83,9 @@
                     text-align: center;
                     margin: auto;
                 }
+                &:hover {
+                    border: 3px solid #ffffffbb;
+                }
                 &:checked {
                     border: 3px solid white;
                     &::after{
@@ -74,6 +94,14 @@
                     }
                 }
             }
+        }
+        .add-button {
+            margin-top: 20px;
+            width: 240px;
+            height: 80px;
+            appearance: none;
+            font-family: 'normal';
+            font-size: 25px;
         }
     }
 }
