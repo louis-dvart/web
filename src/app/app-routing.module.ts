@@ -4,13 +4,21 @@ import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
-    { path: '', component: HomeComponent },
-    { path: 'product/:pid', component: ProductComponent },
-    { path: '**', component: HomeComponent },
+	{ path: '', component: HomeComponent },
+	{
+		path: 'product/:pid',
+		outlet: 'modal',
+		component: ProductComponent,
+	},
+	{ path: '**', component: HomeComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+	imports: [RouterModule.forRoot(
+		routes, {
+			useHash: true,
+			anchorScrolling: "enabled",
+		})],
+		exports: [RouterModule]
 })
 export class AppRoutingModule { }
