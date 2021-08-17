@@ -1,22 +1,48 @@
-footer {
-    margin: 100px;
-    text-align: center;
-    color: white;
-    h1 {
-        font-family: 'iron-shark';
-        font-size: 30px;
+.footer {
+    margin-top: 100px;
+    &-banner {
+        width: 100%;
+        height: 300px;
     }
-    h2 {
-        font-family: 'normal';
-        font-size: 20px;
+    &-details {
+        margin: 30px 100px 100px 100px;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        &-item {
+            text-align: center;
+            &:first-child {
+                text-align: left;
+            }
+            &:last-child {
+                text-align: right;
+            }
+        }
+        h2 {
+            font-family: 'normal';
+            font-size: 20px;
+        }
+        img {
+            width: 40px;
+            margin: 0px 20px 20px 20px;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity .3s;
+            &:hover {
+                opacity: 1;
+            }
+        }
         a, a:visited {
             text-decoration: none;
-            color: #51fbcb;
+            color: #51fbcb; // LINK COLOR
+            font-family: 'normal';
+            font-size: 20px;
+            opacity: 0.8;
+            transition: opacity .3s;
+            &:hover {
+                opacity: 1;
+            }
         }
-    }
-    img {
-        width: 30px;
-        margin: 20px;
     }
 }
 
