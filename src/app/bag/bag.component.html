@@ -1,7 +1,29 @@
 <div class="back-scrim" (click)="closeModal()"></div>
 
-<div class="container">
-	<img class="close-button" src="assets/divisor.png" alt="" (click)="closeModal()">
+<div [@fadeIn]="true" class="container">
 	<h1>BAG</h1>
+	<ul class="item-list">
+		<li class="item">
+			<img class="item-image" src="assets/products/shirt.png">
+			<div>
+				<h3>NAME</h3>
+				<h3>Price: 1</h3>
+				<h3>Quantity: 3</h3>
+			</div>
+			<img class="remove-button" src="assets/divisor.png">
+		</li>
+		<li class="item">
+			<img class="item-image" src="assets/products/shirt.png">
+			<div>
+				<h3>NAME</h3>
+				<h3>Price: 1</h3>
+				<h3>Quantity: 1</h3>
+			</div>
+			<img class="remove-button" src="assets/divisor.png">
+		</li>
+	</ul>
+	<hr>
+	<h2>Subtotal: Muita guita</h2>
+	<button class="checkout-button" type="submit">CHECKOUT</button>
 </div>
 

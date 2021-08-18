@@ -19,9 +19,8 @@ export class AppComponent {
     scrollToShop() : void {
         let shopnav = document.getElementById('shop-nav');
         if (shopnav) {
-            console.log(shopnav.getBoundingClientRect().top - 80);
             window.scrollTo({
-                top: shopnav.getBoundingClientRect().top - 80,
+                top: shopnav.getBoundingClientRect().top,
                 behavior: 'smooth'
             });
         }
