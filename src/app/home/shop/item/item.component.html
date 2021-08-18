@@ -1,4 +1,4 @@
-<div class="item-container" [routerLink]="[ '/', { outlets: { modal: ['product', item.id ] } } ]">
+<div class="item-container" [routerLink]="[ '/', { outlets: { view: ['product', item.id ] } } ]">
 	<img class="item-cover-image" src="{{ item.img }}" alt="">
 	<h1 class="item-name">{{ item.name }}</h1>
 	<h2 class="item-price">{{ item.price }}</h2>

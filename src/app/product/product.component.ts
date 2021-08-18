@@ -35,7 +35,7 @@ export class ProductComponent implements OnInit {
 
 	public closeModal() : void {
 		this.router.navigate(
-			[ "/", { outlets: { modal: null } } ]
+			[ "/", { outlets: { view: null } } ]
 		);
 	}
 
