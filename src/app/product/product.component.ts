@@ -35,6 +35,7 @@ export class ProductComponent implements OnInit {
 		if (this.error) return;
 
 		this.bagRuntime.addItem(item, this.option, 1);
+		this.closeModal();
 	}
 
 	@HostListener('document:keydown.escape', ['$event'])

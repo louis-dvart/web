@@ -27,7 +27,7 @@ export class BagRuntime {
 		});
 	}
 
-	public async addItem(item: Item, options: string, count: number) : Promise<string> {
+	public async addItem(item: Item, options: string, count: number) : Promise<number> {
 		var state = this.store.getSnapshot();
 		var id = ( state.id + 1 );
 		var items = state.items;
@@ -45,7 +45,7 @@ export class BagRuntime {
 	}
 
 
-	public async removeItem(id: string) : Promise<void> {
+	public async removeItem(id: number) : Promise<void> {
 
 		var state = this.store.getSnapshot();
 

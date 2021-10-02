@@ -25,6 +25,7 @@ import { BagRuntime } from './bag.runtime';
 export class BagComponent implements OnInit {
 
 	public items: { item: Item, options: string, count: number }[];
+	public subtotal: number = 0;
 
 	constructor(
 			private router: Router,
@@ -43,9 +44,14 @@ export class BagComponent implements OnInit {
 			this.bagRuntime.getItems().subscribe(
 				(items) => {
 					this.items = items;
+					this.subtotal = this.getSubtotal();
 				}
 			)
 		);
+	}
+
+	private getSubtotal(): number {
+		return this.items.reduce((prev, curr) => prev + curr.item.price * curr.count, 0);
 	}
 
 	removeItem(item: Item) : void {

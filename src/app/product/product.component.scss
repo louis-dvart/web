@@ -104,9 +104,10 @@ $popup_width: 80vw;
 			margin-top: 20px;
 			width: 240px;
 			height: 80px;
-			appearance: none;
 			font-family: 'normal';
 			font-size: 25px;
+			cursor: pointer;
+			border-radius: 0px;
 		}
 	}
 }

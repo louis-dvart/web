@@ -7,14 +7,17 @@
 			<img class="item-image" src="{{ item.item.img }}">
 			<div>
 				<h3>{{ item.item.name }} - {{ item.options }}</h3>
-				<h3>Price: {{ item.item.price }}</h3>
+				<h3>Price: {{ item.item.price }}€</h3>
 				<h3>Quantity: {{ item.count }}</h3>
 			</div>
-			<img class="remove-button" src="assets/divisor.png">
+			<img class="remove-button" (click)="removeItem(item.item)" src="assets/divisor.png">
 		</li>
 	</ul>
+	<h3 *ngIf="items.length == 0">EMPTY</h3>
 	<hr>
-	<h2>Subtotal: Muita guita</h2>
-	<button class="checkout-button" type="submit">CHECKOUT</button>
+	<div *ngIf="items.length > 0">
+		<h2>Subtotal: {{ subtotal.toFixed(2) }}€</h2>
+		<button class="checkout-button" type="submit">CHECKOUT</button>
+	</div>
 </div>
 

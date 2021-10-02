@@ -28,6 +28,7 @@ $item_height: 150px;
 	top: $navbar_height ;
 	right: 0;
 	max-height: $popup_height;
+	min-width: 280px;
 	margin: 20px;
 	padding: 20px;
 	z-index: 110;
@@ -42,6 +43,11 @@ $item_height: 150px;
 	h1 {
 		font-family: 'iron-shark';
 		font-size: 22px;
+		margin: 0;
+	}
+	h3 {
+		font-family: 'normal';
+		font-size: 20px;
 		margin: 0;
 	}
 	.item-list {
