@@ -18,11 +18,10 @@ export class AppComponent {
 
     scrollToShop() : void {
         let shopnav = document.getElementById('shop-nav');
+
         if (shopnav) {
-            window.scrollTo({
-                top: shopnav.getBoundingClientRect().top,
-                behavior: 'smooth'
-            });
+            const y: number = shopnav.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({top: y, behavior: 'smooth'});
         }
     }
 

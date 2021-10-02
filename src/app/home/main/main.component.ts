@@ -13,6 +13,15 @@ export class MainComponent implements AfterViewInit {
     ngAfterViewInit(): void {
     }
 
+    scrollToShop() : void {
+        let shopnav = document.getElementById('shop-nav');
+
+        if (shopnav) {
+            const y: number = shopnav.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({top: y, behavior: 'smooth'});
+        }
+    }
+
     @HostListener('window:scroll', ['$event']) scrollEvent() {
         this.setScrollFlag();
     }
