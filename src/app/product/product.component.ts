@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Item } from '../item';
 import * as products from '../../assets/products/products.json';
+import { BagRuntime } from '../bag/bag.runtime';
 
 @Component({
 	selector: 'app-product',
@@ -11,12 +12,13 @@ import * as products from '../../assets/products/products.json';
 export class ProductComponent implements OnInit {
 	product_id!: string;
 	product!: Item;
+	option: any;
+	error: boolean = false;
 
-	private router: Router;
-
-	constructor(private route: ActivatedRoute, router: Router) {
-		this.router = router;
-	}
+	constructor(
+			private route: ActivatedRoute,
+			private router: Router,
+			private bagRuntime: BagRuntime) { }
 
 	ngOnInit(): void {
 		// get route parameters
@@ -26,6 +28,13 @@ export class ProductComponent implements OnInit {
 				this.product = p;
 		if (! this.product)
 			this.closeModal();
+	}
+
+	public addToBag(item: Item) {
+		this.error = !this.option;
+		if (this.error) return;
+
+		this.bagRuntime.addItem(item, this.option, 1);
 	}
 
 	@HostListener('document:keydown.escape', ['$event'])

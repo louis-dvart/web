@@ -2,7 +2,8 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Item } from '../item';
-import * as products from '../../assets/products/products.json';
+import { SubscriptionManager } from './subscription-manager';
+import { BagRuntime } from './bag.runtime';
 
 @Component({
 	selector: 'app-bag',
@@ -23,14 +24,36 @@ import * as products from '../../assets/products/products.json';
 })
 export class BagComponent implements OnInit {
 
-	private router: Router;
+	public items: { item: Item, options: string, count: number }[];
 
-	constructor(router: Router) {
-		this.router = router;
+	constructor(
+			private router: Router,
+			private subscriptions: SubscriptionManager,
+			private bagRuntime: BagRuntime){
+		this.items = [];
+		this.subscriptions = new SubscriptionManager();
+	}
+
+	ngOnDestroy() : void {
+		this.subscriptions.unsubscribe();
 	}
 
 	ngOnInit(): void {
+		this.subscriptions.add(
+			this.bagRuntime.getItems().subscribe(
+				(items) => {
+					this.items = items;
+				}
+			)
+		);
 	}
+
+	removeItem(item: Item) : void {
+		this.bagRuntime.removeItem(item.id);
+	}
+
+
+	// MODAL METHODS
 
 	@HostListener('document:keydown.escape', ['$event'])
 	handleEscapeKey(event: KeyboardEvent) {

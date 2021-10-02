@@ -9,12 +9,13 @@
 		<h2 class="product-description">{{ product.description }}</h2>
 		<h3 class="">Size:</h3>
 		<div class="size-selector">
-			<input type="radio" name="size" value="S" data-value="S">
-			<input type="radio" name="size" value="M" data-value="M">
-			<input type="radio" name="size" value="L" data-value="L">
-			<input type="radio" name="size" value="XL" data-value="XL">
+			<input type="radio" name="size" value="S"  data-value="S"  [(ngModel)]="option">
+			<input type="radio" name="size" value="M"  data-value="M"  [(ngModel)]="option">
+			<input type="radio" name="size" value="L"  data-value="L"  [(ngModel)]="option">
+			<input type="radio" name="size" value="XL" data-value="XL" [(ngModel)]="option">
 		</div>
-		<button class="add-button" type="submit">ADD TO BAG</button>
+		<div *ngIf="error"><p class="error-message">Please select a size.</p></div>
+		<button class="add-button" (click)="addToBag(product)">ADD TO BAG</button>
 	</div>
 </div>
 

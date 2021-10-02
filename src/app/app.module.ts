@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { ProductComponent } from './product/product.component';
 import { BagComponent } from './bag/bag.component';
+import { SubscriptionManager } from './bag/subscription-manager';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -17,10 +19,13 @@ import { BagComponent } from './bag/bag.component';
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
+        FormsModule,
         AppRoutingModule,
         HomeModule,
     ],
-    providers: [],
+    providers: [
+        SubscriptionManager,
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

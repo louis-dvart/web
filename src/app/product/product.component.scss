@@ -53,7 +53,7 @@ $popup_width: 80vw;
 	}
 
 	.details {
-		width: 50%;
+		// width: 50%;
 		padding-left: 50px;
 		padding-right: 55px;
 		h1 {
@@ -109,4 +109,10 @@ $popup_width: 80vw;
 			font-size: 25px;
 		}
 	}
+}
+
+.error-message {
+	font-family: 'normal';
+	font-size: 18px;
+	color: red;
 }
