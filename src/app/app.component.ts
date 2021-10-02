@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
     selector: 'app-root',
@@ -9,6 +9,7 @@ export class AppComponent {
     title = 'dvart-web';
 
     isSideMenuOpen: boolean = false;
+    isScrollArrowShown: boolean = false;
 
     constructor(){}
 
@@ -31,5 +32,19 @@ export class AppComponent {
 
     go_to_youtube() : void {
         window.location.href='https://www.youtube.com/watch?v=A2Keszteelg&list=PLJipLc0D7d9ReZYUE4QTzbLtfx6Kxz6yy';
+    }
+
+    @HostListener("window:scroll")
+    onWindowScroll(): void{
+        this.isScrollArrowShown = (this.getDocumentHeight() - window.scrollY) / this.getDocumentHeight() > 0.4;
+    }
+
+    // helper function to get the correct document height
+    getDocumentHeight() : number {
+        return Math.max(
+            document.body.scrollHeight, document.documentElement.scrollHeight,
+            document.body.offsetHeight, document.documentElement.offsetHeight,
+            document.body.clientHeight, document.documentElement.clientHeight
+        );
     }
 }

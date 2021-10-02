@@ -34,5 +34,7 @@
 </div>
 <div class="side-navbar-scrim" [class]="isSideMenuOpen ? 'open': ''" (click)="toggleSideMenu()"></div>
 
+<img *ngIf="isScrollArrowShown" class="scroll-arrow" src="assets/arrow.png" alt="">
+
 <router-outlet></router-outlet>
 <router-outlet name="view"></router-outlet>

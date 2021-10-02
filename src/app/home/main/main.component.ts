@@ -6,7 +6,6 @@ import { Component, AfterViewInit, HostListener } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements AfterViewInit {
-    isScrollArrowShown: boolean = false;
 
     constructor(){}
 
@@ -21,17 +20,4 @@ export class MainComponent implements AfterViewInit {
             window.scrollTo({top: y, behavior: 'smooth'});
         }
     }
-
-    @HostListener('window:scroll', ['$event']) scrollEvent() {
-        this.setScrollFlag();
-    }
-
-    @HostListener('window:resize', ['$event']) resizeEvent() {
-        this.setScrollFlag();
-    }
-
-    setScrollFlag() : void {
-        this.isScrollArrowShown = !((window.innerHeight - window.pageYOffset) / window.innerHeight < .25)
-    }
-
 }

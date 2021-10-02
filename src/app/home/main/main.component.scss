@@ -64,13 +64,6 @@
     transition: opacity .5s;
 }
 
-.scroll-arrow {
-    position: fixed;
-    bottom: 3%;
-    width: 20px;
-    left: calc(50% - 10px);
-}
-
 @media screen and (max-width: 1080px) {
     .panel {
         &-left {
