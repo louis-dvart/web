@@ -65,14 +65,28 @@
 }
 
 .bag-icon {
-    width: 20px;
     position: absolute;
     right: 30px;
-    cursor: pointer;
-    opacity: 0.8;
-    transition: opacity .5s;
-    &:hover {
-        opacity: 1;
+    img {
+        cursor: pointer;
+        opacity: 0.8;
+        transition: opacity .5s;
+        width: 20px;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .item-counter {
+        position: absolute;
+        left: 8px;
+        top: -10px;
+        width: 18px;
+        height: 18px;
+        text-align: center;
+        font-family: 'normal';
+        background-color: $green_color;
+        padding: 3px;
+        border-radius: 50%;
     }
 }
 

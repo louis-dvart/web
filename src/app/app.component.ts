@@ -1,4 +1,6 @@
 import { Component, HostListener } from '@angular/core';
+import { BagRuntime } from './bag/bag.runtime';
+import { SubscriptionManager } from './bag/subscription-manager';
 
 @Component({
     selector: 'app-root',
@@ -11,7 +13,28 @@ export class AppComponent {
     isSideMenuOpen: boolean = false;
     isScrollArrowShown: boolean = false;
 
-    constructor(){}
+    item_count: number = 0;
+
+    constructor(
+            private subscriptions: SubscriptionManager,
+            private bagRuntime: BagRuntime){
+        this.subscriptions = new SubscriptionManager();
+    };
+
+    ngOnDestroy() : void {
+        this.subscriptions.unsubscribe();
+    }
+
+    ngOnInit(): void {
+        this.subscriptions.add(
+            this.bagRuntime.getItems().subscribe(
+                (items) => {
+                    this.item_count = items.reduce((prev, curr) => prev + curr.count, 0);
+                    // this.item_count = items.length;
+                }
+            )
+        );
+    }
 
     toggleSideMenu() : void {
         this.isSideMenuOpen = ! this.isSideMenuOpen;

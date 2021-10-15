@@ -15,7 +15,10 @@
     <div class="navbar-item navbar-top" routerLink="about">
         <h1>ABOUT</h1>
     </div>
-    <img class="bag-icon" src="assets/bag.png" [routerLink]="[ '/', { outlets: { view: 'bag' } } ]" >
+    <div class="bag-icon" [routerLink]="[ '/', { outlets: { view: 'bag' } } ]" >
+        <img src="assets/bag.png">
+        <label *ngIf="item_count > 0" class="item-counter">{{ item_count }}</label>
+    </div>
 </div>
 
 <div class="side-navbar" [class]="isSideMenuOpen ? 'open': ''">
