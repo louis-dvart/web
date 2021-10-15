@@ -1,0 +1,48 @@
+<div class="back-scrim" (click)="closeModal()"></div>
+
+<div class="container">
+	<div class="split left">
+		<h1>DELIVERY</h1>
+
+		<label>First Name</label>
+		<input type="text" required>
+
+		<label>Last Name</label>
+		<input type="text" required>
+
+		<label>Address 1</label>
+		<input type="text" required>
+
+		<label>Address 2</label>
+		<input type="text" required>
+
+		<label>City</label>
+		<input type="text" required>
+
+		<label>Zip Code</label>
+		<input type="text" required>
+
+		<label>Phone Number</label>
+		<input type="text" required>
+	</div>
+
+	<div class="split right">
+		<h1>PAYMENT</h1>
+		<h3>Your Order</h3>
+		<div class="checkout-item" *ngFor="let item of items">
+			<label>[{{ item.count }}] {{ item.item.name }} - {{ item.options }}</label>
+			<label>{{ item.item.price }}€</label>
+		</div>
+		<div class="checkout-item delivery">
+			<label>Delivery Fee:</label>
+			<label>5€</label>
+		</div>
+		<div class="checkout-item total">
+			<label>Total:</label>
+			<label>{{ (subtotal + 5).toFixed(2) }}€</label>
+		</div>
+		<hr>
+	</div>
+	<img class="close-button" src="assets/divisor.png" alt="" (click)="closeModal()">
+</div>
+

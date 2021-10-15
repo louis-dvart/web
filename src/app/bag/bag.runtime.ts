@@ -46,7 +46,6 @@ export class BagRuntime {
 
 
 	public async removeItem(id: number) : Promise<void> {
-
 		var state = this.store.getSnapshot();
 
 		var items = state.items.filter(
@@ -56,6 +55,13 @@ export class BagRuntime {
 		);
 
 		this.store.setState({ items });
+	}
+
+	public getSubtotal(items?: { item: Item, options: string, count: number }[]): number {
+		if (!items)
+			return this.store.getSnapshot().items.reduce((prev, curr) => prev + curr.item.price * curr.count, 0);
+		else
+			return items.reduce((prev, curr) => prev + curr.item.price * curr.count, 0);
 	}
 
 	// Return a stream for the friends.

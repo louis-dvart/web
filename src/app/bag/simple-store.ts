@@ -8,9 +8,7 @@ export class SimpleStore<StateType = any> {
 	private stateSubject: BehaviorSubject<StateType>;
 
 	constructor( initialState: StateType ) {
-
 		this.stateSubject = new BehaviorSubject( initialState );
-
 	}
 
 	public getSnapshot() : StateType {

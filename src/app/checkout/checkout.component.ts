@@ -1,28 +1,15 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { trigger, state, style, transition, animate } from '@angular/animations';
-import { Item } from '../item';
-import { SubscriptionManager } from './subscription-manager';
-import { BagRuntime } from './bag.runtime';
+import {BagRuntime} from '../bag/bag.runtime';
+import {SubscriptionManager} from '../bag/subscription-manager';
+import {Item} from '../item';
 
 @Component({
-	selector: 'app-bag',
-	templateUrl: './bag.component.html',
-	styleUrls: ['./bag.component.scss'],
-	animations: [
-		trigger('fadeIn', [
-			state('void', style({
-				transform: 'scaleY(0)'
-			})),
-			state('true', style({
-				transform: 'scaleY(1)'
-			})),
-			transition('1 => 0', animate('.2s ease-out')),
-			transition('void => 1', animate('.2s ease-in')),
-		])
-	]
+	selector: 'app-checkout',
+	templateUrl: './checkout.component.html',
+	styleUrls: ['./checkout.component.scss']
 })
-export class BagComponent implements OnInit {
+export class CheckoutComponent implements OnInit {
 
 	public items: { item: Item, options: string, count: number }[];
 	public subtotal: number = 0;
@@ -50,10 +37,6 @@ export class BagComponent implements OnInit {
 		);
 	}
 
-	removeItem(item: Item) : void {
-		this.bagRuntime.removeItem(item.id);
-	}
-
 
 	// MODAL METHODS
 
@@ -67,4 +50,5 @@ export class BagComponent implements OnInit {
 			[ "/", { outlets: { view: null } } ]
 		);
 	}
+
 }

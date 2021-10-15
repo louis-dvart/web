@@ -31,7 +31,7 @@ export class AppComponent {
     }
 
     go_to_youtube() : void {
-        window.location.href='https://www.youtube.com/watch?v=A2Keszteelg&list=PLJipLc0D7d9ReZYUE4QTzbLtfx6Kxz6yy';
+        window.location.href='https://www.youtube.com/watch?v=7mO_RojGrb4&list=PLJipLc0D7d9ReZYUE4QTzbLtfx6Kxz6yy&index=1';
     }
 
     @HostListener("window:scroll")

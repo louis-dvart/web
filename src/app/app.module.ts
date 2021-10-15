@@ -9,12 +9,14 @@ import { ProductComponent } from './product/product.component';
 import { BagComponent } from './bag/bag.component';
 import { SubscriptionManager } from './bag/subscription-manager';
 import { FormsModule } from '@angular/forms';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         ProductComponent,
         BagComponent,
+        CheckoutComponent,
     ],
     imports: [
         BrowserModule,
