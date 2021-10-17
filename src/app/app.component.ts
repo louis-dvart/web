@@ -49,7 +49,16 @@ export class AppComponent {
         }
     }
 
-    scrollToTop() : void{
+    scrollToAbout() : void {
+        let aboutnav = document.getElementById('about-nav');
+
+        if (aboutnav) {
+            const y: number = aboutnav.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({top: y, behavior: 'smooth'});
+        }
+    }
+
+    scrollToTop() : void {
         window.scrollTo({top: 0, behavior: 'smooth'});
     }
 

@@ -12,7 +12,7 @@
         <h1>SHOP</h1>
     </div>
     <img class="navbar-divisor" src="assets/divisor.png" alt="">
-    <div class="navbar-item navbar-top" routerLink="about">
+    <div class="navbar-item navbar-top" (click)="scrollToAbout()">
         <h1>ABOUT</h1>
     </div>
     <div class="bag-icon" [routerLink]="[ '/', { outlets: { view: 'bag' } } ]" >
@@ -31,7 +31,7 @@
     <div class="navbar-item" href="#shop" (click)="scrollToShop()">
         <h1>SHOP</h1>
     </div>
-    <div class="navbar-item" routerLink="about">
+    <div class="navbar-item" (click)="scrollToAbout()">
         <h1>ABOUT</h1>
     </div>
 </div>
