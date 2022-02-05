@@ -1,44 +1,9 @@
 [
 	{
 		"id": 10,
-		"name": "motor t-shirt",
-		"description": "eiah bem olha-me so esta descricao memo gigante pa ver se o texto fica bacano ou nao, fodass, memo bom caralho aaaaaaaahhhhh!!!!!!!",
+		"name": "MOTOR T-SHIRT",
+		"description": "Louis Dvart MOTOR t-shirt in black, white and purple.  this t-shirt features the cover art for the single 'MOTOR'.  made by LD for V's.",
 		"price": 20.00,
-		"img": "assets/products/shirt.png"
-	},
-	{
-		"id": "11",
-		"name": "motor t-shirt",
-		"description": "shirt memo gayzola",
-		"price": 20.00,
-		"img": "assets/products/shirt.png"
-	},
-	{
-		"id": "12",
-		"name": "motor t-shirt",
-		"description": "shirt memo gayzola",
-		"price": 20.00,
-		"img": "assets/products/shirt.png"
-	},
-	{
-		"id": "13",
-		"name": "motor t-shirt",
-		"description": "shirt memo gayzola",
-		"price": 20.00,
-		"img": "assets/products/shirt.png"
-	},
-	{
-		"id": "14",
-		"name": "motor t-shirt",
-		"description": "uma chain toda fatelona",
-		"price": 20.00,
-		"img": "assets/products/shirt.png"
-	},
-	{
-		"id": "15",
-		"name": "motor t-shirt",
-		"description": "uma chain toda fatelona",
-		"price": 20.01,
 		"img": "assets/products/shirt.png"
 	}
 ]
