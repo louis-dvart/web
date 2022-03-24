@@ -12,9 +12,11 @@
     align-items: center;
     justify-content: center;
     height: calc(100% - #{$navbar-height});
+    filter: saturate(0);
 
     &:hover {
         cursor: pointer;
+        filter: saturate(1);
     }
 
     &:hover > .videos {
