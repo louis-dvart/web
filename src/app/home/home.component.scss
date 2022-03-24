@@ -1,3 +1,5 @@
+@import '~src/globals';
+
 $footer_icon_size: 25px;
 
 .footer {
@@ -28,6 +30,7 @@ $footer_icon_size: 25px;
             font-family: 'normal';
             font-size: 12px;
             margin-bottom: 0px;
+            color: $green_color;
         }
         img {
             width: $footer_icon_size;
@@ -44,7 +47,7 @@ $footer_icon_size: 25px;
             justify-content: center;
             height: $footer_icon_size;
             text-decoration: none;
-            color: #51fbcb; // LINK COLOR
+            color: white;
             font-family: 'normal';
             font-size: 12px;
             opacity: 0.8;
