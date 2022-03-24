@@ -11,7 +11,15 @@ body, html {
     src: url("assets/fonts/AkzidenzGrotesk-LightExtended.otf");
 }
 @font-face {
-    font-family: 'iron-shark';
-    src: url("assets/fonts/Iron-Shark.otf");
+    font-family: 'extended';
+    src: url("assets/fonts/AkzidenzGrotesk-Extended.otf");
+}
+@font-face {
+    font-family: 'condensed';
+    src: url("assets/fonts/AkzidenzGrotesk-Cond.otf");
+}
+@font-face {
+    font-family: 'gameplay';
+    src: url("assets/fonts/Gameplay.ttf");
 }
 

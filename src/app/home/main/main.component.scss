@@ -12,48 +12,56 @@
     align-items: center;
     justify-content: center;
     height: calc(100% - #{$navbar-height});
-    filter: saturate(0);
+    transition: .5s;
+    width: 50%;
 
     &:hover {
         cursor: pointer;
-        filter: saturate(1);
     }
 
+    & > .videos {
+        filter: saturate(0);
+    }
     &:hover > .videos {
         opacity: 0.7;
+        filter: saturate(.7);
     }
 
     &-left {
         float: left;
-        width: 50%;
-        transition: width .5s;
     }
 
     &-right {
         float: right;
-        width: 50%;
-        transition: width .5s;
     }
 
     &-headers {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         position: absolute;
         color: white;
     }
 
     &-header {
-        font-family: 'iron-shark';
+        font-family: 'gameplay';
         font-size: 4vw;
         margin: 0;
     }
 
     &-subheader {
-        font-family: 'normal';
+        font-family: 'condensed';
         font-size: 1.2vw;
         margin: 0;
+        color: $green_color;
+        transition: color .5s;
+    }
+    &-right .panel-subheader {
+        text-align: right;
+    }
+
+    &:hover .panel-subheader {
+        color: white;
     }
 }
 
