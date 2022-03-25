@@ -11,7 +11,7 @@ $item_height: 400px;
     }
     &::after {
         content: 'BUY NOW';
-        font-family: 'normal';
+        font-family: 'condensed';
         font-size: 20px;
         position: absolute;
         top: 0;
@@ -32,7 +32,7 @@ $item_height: 400px;
 .item {
     &-name {
         color: white;
-        font-family: 'normal';
+        font-family: 'condensed';
         font-size: 15px;
         text-transform: uppercase;
         text-align: center;
@@ -47,7 +47,7 @@ $item_height: 400px;
         margin-top: 0px;
         margin-bottom: auto;
         color: white;
-        font-family: 'normal';
+        font-family: 'condensed';
         font-size: 15px;
         text-align: center;
         opacity: 0;

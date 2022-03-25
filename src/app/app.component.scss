@@ -29,7 +29,9 @@
     }
 
     &-divisor {
-        width: 35px;
+        color: $green_color;
+        cursor: default;
+        font-family: 'extended';
     }
 }
 
