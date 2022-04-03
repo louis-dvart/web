@@ -13,7 +13,7 @@
 			<img class="remove-button" (click)="removeItem(item.item)" src="assets/divisor.png">
 		</li>
 	</ul>
-	<h3 *ngIf="items.length == 0">EMPTY</h3>
+	<h3 *ngIf="items.length === 0">EMPTY</h3>
 	<hr>
 	<div *ngIf="items.length > 0">
 		<h2>Subtotal: {{ subtotal.toFixed(2) }}€</h2>

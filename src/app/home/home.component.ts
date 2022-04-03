@@ -1,28 +1,24 @@
-import { Component, AfterViewInit, HostListener} from '@angular/core';
+import { Component, HostListener } from '@angular/core'
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss'],
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements AfterViewInit {
-    isScrollArrowShown: boolean = false;
+export class HomeComponent {
+  isScrollArrowShown: boolean = false
 
-    constructor(){}
+  constructor () {}
 
-    ngAfterViewInit(): void {
+    @HostListener('window:scroll', ['$event']) scrollEvent () {
+    this.setScrollFlag()
+  }
+
+    @HostListener('window:resize', ['$event']) resizeEvent () {
+      this.setScrollFlag()
     }
 
-    @HostListener('window:scroll', ['$event']) scrollEvent() {
-        this.setScrollFlag();
+    setScrollFlag () : void {
+      this.isScrollArrowShown = !((window.innerHeight - window.pageYOffset) / window.innerHeight < 0.25)
     }
-
-    @HostListener('window:resize', ['$event']) resizeEvent() {
-        this.setScrollFlag();
-    }
-
-    setScrollFlag() : void {
-        this.isScrollArrowShown = !((window.innerHeight - window.pageYOffset) / window.innerHeight < .25)
-    }
-
 }

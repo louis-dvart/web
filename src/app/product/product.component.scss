@@ -2,7 +2,7 @@
 @import 'src/globals';
 
 :host {
-	background-color: rgba( 0, 0, 0, 0.85 ) ;
+	background-color: rgba( 0, 0, 0, 0.5 ) ;
 	display: flex ;
 	justify-content: center;
 	align-items: center;
@@ -19,7 +19,7 @@
 	position: fixed ;
 	width: 100%;
 	height: 100%;
-	margin: auto auto auto auto ;
+	margin: auto;
 }
 
 .container {
@@ -59,11 +59,11 @@
 			font-size: 40px;
 		}
 		h2 {
-			font-family: 'normal';
+			font-family: 'condensed';
 			font-size: 22px;
 		}
 		h3 {
-			font-family: 'normal';
+			font-family: 'condensed';
 			font-size: 20px;
 		}
 		.size-selector {
@@ -74,7 +74,8 @@
 				width: 44px;
 				height: 44px;
 				border: 2px solid #ffffff44;
-				margin: 10px;
+				margin: 10px 20px 10px 0;
+
 				&::after {
 					content: attr(data-value);
 					display: flex;
@@ -102,7 +103,7 @@
 			margin-top: 20px;
 			width: 240px;
 			height: 80px;
-			font-family: 'normal';
+			font-family: 'condensed';
 			font-size: 25px;
 			cursor: pointer;
 			border-radius: 0px;
@@ -111,7 +112,7 @@
 }
 
 .error-message {
-	font-family: 'normal';
+	font-family: 'condensed';
 	font-size: 18px;
 	color: red;
 }
